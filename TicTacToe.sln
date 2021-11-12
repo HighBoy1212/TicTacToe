@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{2FA904E7-0C19-4BE0-9D11-578A9F2AD648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePlay", "GamePlay\GamePlay.csproj", "{264197D0-8364-4DA2-835D-E6C613E36E4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI1", "AI1\AI1.csproj", "{8ECC793B-8D3B-491F-B90C-076AD51A840C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FA904E7-0C19-4BE0-9D11-578A9F2AD648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA904E7-0C19-4BE0-9D11-578A9F2AD648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA904E7-0C19-4BE0-9D11-578A9F2AD648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA904E7-0C19-4BE0-9D11-578A9F2AD648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264197D0-8364-4DA2-835D-E6C613E36E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264197D0-8364-4DA2-835D-E6C613E36E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264197D0-8364-4DA2-835D-E6C613E36E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264197D0-8364-4DA2-835D-E6C613E36E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECC793B-8D3B-491F-B90C-076AD51A840C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECC793B-8D3B-491F-B90C-076AD51A840C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECC793B-8D3B-491F-B90C-076AD51A840C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECC793B-8D3B-491F-B90C-076AD51A840C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08967842-818E-40B3-9237-9288BFAE8320}
+	EndGlobalSection
+EndGlobal
