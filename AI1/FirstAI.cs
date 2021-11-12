@@ -58,6 +58,7 @@ namespace AI1
                 iCount = 0;
             }
 
+
             // Check for a possible win in each Column
             // Loop through columns
             for (int iCol = 0; iCol < 3; iCol++)
