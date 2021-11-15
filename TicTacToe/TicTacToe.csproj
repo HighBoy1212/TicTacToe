@@ -91,7 +91,11 @@
   <ItemGroup>
     <Content Include="Blank.png" />
     <Content Include="O.png" />
+    <Content Include="PluginList.txt" />
     <Content Include="X.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(TargetDir)\Plugins" &amp; copy /y "$(ProjectDir)\PluginList.txt" "$(TargetDir)\Plugins\PluginList.txt"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
