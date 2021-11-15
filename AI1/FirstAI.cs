@@ -49,7 +49,8 @@ namespace AI1
                     // Check to see if the AI has two in a row and the third cell is empty
                     if (iCount == 2 && iCol == 2 && X == iRow)
                     {
-                        Console.WriteLine("Row " + Y.ToString() + "," + X.ToString());
+                        // This was for detecting/checking for errors
+                        // Console.WriteLine("Row " + Y.ToString() + "," + X.ToString());
                         // Make and return point with winning coordinates
                         ptCoords.X = X;
                         ptCoords.Y = Y;
@@ -81,7 +82,8 @@ namespace AI1
                     // Check to see if the AI has two in a row and the third cell is empty
                     if (iCount == 2 && iRow == 2 && Y == iCol)
                     {
-                        Console.WriteLine("Col " + X.ToString() + "," + Y.ToString());
+                        // This was for detecting/checking for errors
+                        // Console.WriteLine("Col " + X.ToString() + "," + Y.ToString());
                         // Make and return point with winning coordinates
                         ptCoords.X = X;
                         ptCoords.Y = Y;
@@ -109,7 +111,8 @@ namespace AI1
                 // Check to see if the AI has two on the diagonal and the third is empty
                 if (iCount == 2 && X == Y)
                 {
-                    Console.WriteLine("Dia " + X.ToString() + "," + (Y).ToString());
+                    // This was for detecting/checking for errors
+                    // Console.WriteLine("Dia " + X.ToString() + "," + (Y).ToString());
                     // Make and return point with winning coordinates
                     ptCoords.X = X;
                     ptCoords.Y = Y;
@@ -136,7 +139,8 @@ namespace AI1
                 // Check to see if the AI has two on the diagonal and the third is empty
                 if (iCount == 2 && X == 2 - Y)
                 {
-                    Console.WriteLine("Rev " + X.ToString() + "," + Y.ToString());
+                    // This was for detecting/checking for errors
+                    // Console.WriteLine("Rev " + X.ToString() + "," + Y.ToString());
                     // Make and return point with winning coordinates
                     ptCoords.X = X;
                     ptCoords.Y = Y;
@@ -149,7 +153,8 @@ namespace AI1
                 ptCoords.X = rnd.Next(3);
                 ptCoords.Y = rnd.Next(3);
             }
-            Console.WriteLine("Ran " + ptCoords.X.ToString() + "," + ptCoords.Y.ToString());
+            // This was for detecting/checking for errors
+            // Console.WriteLine("Ran " + ptCoords.X.ToString() + "," + ptCoords.Y.ToString());
             return ptCoords;
         }
     }

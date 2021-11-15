@@ -53,7 +53,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /y "$(TargetPath)" "$(SolutionDir)\TicTacToe\bin\Debug\Plugins\$(TargetFileName)"
+    <PostBuildEvent>mkdir "$(SolutionDir)\TicTacToe\bin\Debug\Plugins" &amp; copy /y "$(TargetPath)" "$(SolutionDir)\TicTacToe\bin\Debug\Plugins\$(TargetFileName)"
 </PostBuildEvent>
   </PropertyGroup>
 </Project>
