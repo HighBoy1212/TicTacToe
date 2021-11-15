@@ -24,9 +24,9 @@ namespace AI1
             Random rnd = new Random();
             int iCount = 0;
             // variables to hold the values of unnoccupied cells
-            int X = rnd.Next(3);
-            int Y = rnd.Next(3);
-            Point ptCoords = new Point(X, Y);
+            int X = -1;
+            int Y = -1;
+            Point ptCoords = new Point(rnd.Next(3), rnd.Next(3));
 
             // Check for a possible win in each row
             // Loop through rows
@@ -47,8 +47,9 @@ namespace AI1
                         iCount++;
                     }
                     // Check to see if the AI has two in a row and the third cell is empty
-                    if (iCount == 2)
+                    if (iCount == 2 && iCol == 2 && X == iRow)
                     {
+                        Console.WriteLine("Row " + Y.ToString() + "," + X.ToString());
                         // Make and return point with winning coordinates
                         ptCoords.X = X;
                         ptCoords.Y = Y;
@@ -71,7 +72,6 @@ namespace AI1
                     {
                         X = iRow;
                         Y = iCol;
-                        Console.WriteLine(iRow.ToString() + "," + iCol.ToString());
                     }
                     // Keeps track of the number of AI cells in a column
                     else if (accCells[iRow, iCol] == ccCurrentPlayer)
@@ -79,8 +79,9 @@ namespace AI1
                         iCount++;
                     }
                     // Check to see if the AI has two in a row and the third cell is empty
-                    if (iCount == 2)
+                    if (iCount == 2 && iRow == 2 && Y == iCol)
                     {
+                        Console.WriteLine("Col " + X.ToString() + "," + Y.ToString());
                         // Make and return point with winning coordinates
                         ptCoords.X = X;
                         ptCoords.Y = Y;
@@ -106,8 +107,9 @@ namespace AI1
                     iCount++;
                 }
                 // Check to see if the AI has two on the diagonal and the third is empty
-                if (iCount == 2)
+                if (iCount == 2 && X == Y)
                 {
+                    Console.WriteLine("Dia " + X.ToString() + "," + (Y).ToString());
                     // Make and return point with winning coordinates
                     ptCoords.X = X;
                     ptCoords.Y = Y;
@@ -132,20 +134,22 @@ namespace AI1
                     iCount++;
                 }
                 // Check to see if the AI has two on the diagonal and the third is empty
-                if (iCount == 2)
+                if (iCount == 2 && X == 2 - Y)
                 {
+                    Console.WriteLine("Rev " + X.ToString() + "," + Y.ToString());
                     // Make and return point with winning coordinates
                     ptCoords.X = X;
                     ptCoords.Y = Y;
                     return ptCoords;
                 }
             }
-
+            // Randomize the X and Y coordinates until they are an empty space
             while (accCells[ptCoords.X, ptCoords.Y] != CellContent.Empty)
             {
                 ptCoords.X = rnd.Next(3);
                 ptCoords.Y = rnd.Next(3);
             }
+            Console.WriteLine("Ran " + ptCoords.X.ToString() + "," + ptCoords.Y.ToString());
             return ptCoords;
         }
     }
